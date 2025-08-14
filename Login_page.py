@@ -10,30 +10,21 @@ st.set_page_config(page_title="Login", page_icon="🔐", layout="centered")
 # Background Image (CSS trick)
 page_bg_img = f"""
 <style>
-[data-testid="stAppViewContainer"] > .main {{
-    background-color: yellow;
-    background-image: url("https://images.unsplash.com/photo-1506744038136-
+/* Background Image */
+[data-testid="stAppViewContainer"] {{
+    background-image:linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url("https://images.unsplash.com/photo-1702365202240-ecf532732c76?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }}
+
 .Login-page {{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }}
-.login-box {{
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    width: 350px;
-    margin: auto;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    color: white;
-    font-family: 'Arial', sans-serif;
-}}
+
 
 .login-box h2 {{
     color: white;
@@ -54,6 +45,9 @@ page_bg_img = f"""
     padding: 0.5rem 1rem;
     font-weight: bold;
     cursor: pointer;
+    justify-content: center;
+    margin-top: 2rem;
+    text-align: center;
 }}
 
 .stButton>button:hover {{
@@ -83,14 +77,6 @@ with st.container():
     st.markdown('<a href="#">Forgot Password?</a>', unsafe_allow_html=True)
     login_btn = st.button("Login")
     st.markdown("Don't have an account? <a href='#'>Sign Up_btn</a>", unsafe_allow_html=True)
-    st.write("Or login with:")
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.markdown("[🐦](#)")
-    with col2:
-        st.markdown("[📘](#)")
-    with col3:
-        st.markdown("[💼](#)")
     
     st.markdown('</div>', unsafe_allow_html=True)
 
