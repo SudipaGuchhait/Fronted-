@@ -83,7 +83,7 @@ with st.container():
         )
 
         # Submit button
-    if st.button("Submit"):
+    if st.button("Plan"):
         st.success(f" budget ₹{budget}, traveling with {travel_with}.")
 
     st.markdown("</div>", unsafe_allow_html=True)

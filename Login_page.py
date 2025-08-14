@@ -1,43 +1,43 @@
 import streamlit as st
-import base64
-
-# Function to set background imag
-
-
 # Page config
 st.set_page_config(page_title="Login", page_icon="🔐", layout="centered")
 
 # Background Image (CSS trick)
-page_bg_img = f"""
+st.markdown("""
 <style>
 /* Background Image */
-[data-testid="stAppViewContainer"] {{
+[data-testid="stAppViewContainer"]{
     background-image:linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url("https://images.unsplash.com/photo-1702365202240-ecf532732c76?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}}
+}
 
-.Login-page {{
+.Login-page {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}}
-
-
-.login-box h2 {{
+}
+.login h1{
+    text-align: center;
     color: white;
-}}
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
 
-.login-box label {{
+.login-box h2 {
+    color: white;
+}
+
+.login-box label {
     color: white;
     text-align: left;
     display: block;
     margin-top: 10px;
-}}
+}
 
-.stButton>button {{
+.stButton>button {
     background-color: #f5b041;
     color: white;
     border: none;
@@ -47,24 +47,24 @@ page_bg_img = f"""
     cursor: pointer;
     justify-content: center;
     margin-top: 2rem;
-    text-align: center;
-}}
+    text-align: center;`
+}
 
-.stButton>button:hover {{
+.stButton>button:hover {
     background-color: #e6a732;
-}}
+}
 
-a {{
+a {
     color: yellow;
     text-decoration: none;
-}}
-a:hover {{
+}
+a:hover {
     text-decoration: underline;
-}}
+}
 </style>
-"""
+""" , unsafe_allow_html=True)
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
+#st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Login Form UI
 with st.container():
@@ -86,3 +86,4 @@ if login_btn:
         st.success("Login successful!")
     else:
         st.error("Invalid username or password")
+#

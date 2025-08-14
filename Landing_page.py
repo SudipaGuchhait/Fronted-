@@ -115,7 +115,11 @@ if "page" not in st.session_state:
     st.markdown("""
     <div class="navbar">
         <img src="https://images.squarespace-cdn.com/content/v1/6782a59d9f2e5a4d12afac77/bb8839f8-a268-42c0-8a9f-37b6e30dc7b7/Logo+final.PNG" alt="Logo">
-        <button>Sign In →</button>
+        <div class="cta">
+            <a href="http://localhost:8503/#login" target="_self">
+            <button>Sign In →</button>
+            </a>
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -125,7 +129,7 @@ if "page" not in st.session_state:
         <h1>Travel with ease,with <span>Tripzy</span></h1>
         <p>Your Write any trip description here.</p>
         <div class="cta">
-            <a href="/preferences" target="_self">
+            <a href="http://localhost:8505/#share-your-travel-preferences" target="_self">
             <button>Plan a Trip</button>
             </a>
         </div>
