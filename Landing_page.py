@@ -129,7 +129,7 @@ if "page" not in st.session_state:
         <h1>Travel with ease,with <span>Tripzy</span></h1>
         <p>Your Write any trip description here.</p>
         <div class="cta">
-            <a href="http://localhost:8505/#share-your-travel-preferences" target="_self">
+            <a href="http://localhost:8505/" target="_self">
             <button>Plan a Trip</button>
             </a>
         </div>
